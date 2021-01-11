@@ -1,0 +1,26 @@
+<div class="login-page">
+    <div class="form">
+
+        <div>
+            <img src="../../../assets/logo-nkey.png" width="200"/>
+        </div>
+
+        <form>
+            <mat-form-field class="input">
+                <input type="email" matInput placeholder="Email" [(ngModel)]="login.email" name="email">
+            </mat-form-field>
+            
+            <mat-form-field class="input">
+                <input type="password" matInput placeholder="Senha" [(ngModel)]="login.senha" name="senha">
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button (click)="entrar()" color="primary">
+            Entrar
+        </button>
+        <button mat-stroked-button (click)="cadastrar()" color="primary">
+            Cadastrar-se
+        </button>
+
+    </div>
+</div>

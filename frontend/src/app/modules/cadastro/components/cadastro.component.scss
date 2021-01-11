@@ -1,0 +1,27 @@
+.btn-default {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.btn-new-product {
+  @extend .btn-default;
+  background-color: darkgreen;
+}
+
+.btn-delete-product {
+  @extend .btn-default;
+  background-color: red;
+  color: #ffffff;
+}
+
+.full-width-table {
+    width: 100%;
+  }
+  
+  .edit > i {
+    color: #d9cd26;
+  }
+  
+  .delete > i {
+    color: #e35e6b;
+  }

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  mongodb:
+    build: ./docker/mongodb
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+  nkey-backend:
+    build: ./backend
+    container_name: nkey-backend
+    ports:
+      - 8080:8080
+    links:
+      - mongodb
+  nkey-frontend:
+    build: ./frontend
+    container_name: nkey-frontend
+    ports: 
+      - '8888:80'
+

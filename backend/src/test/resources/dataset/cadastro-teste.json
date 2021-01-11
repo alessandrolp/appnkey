@@ -1,0 +1,23 @@
+{
+	"br.com.nkey.domain.Cadastro" : [
+		{
+			"id" : "55f3ed00b1375a48e618300a",
+			"nome" : "maria",
+			"data" : [2021,1,9,8,37,52,13940159],
+			"usuario" : {
+				"id" : "55f3ed00b1375a48e618300b",
+				"email" : "admin@gmail.com"
+			}
+			
+		}
+	],
+	"br.com.nkey.domain.Usuario" : [
+		{
+			"id" : "55f3ed00b1375a48e618300b",
+			"nome" : "admin",
+			"email" : "admin@gmail.com",
+			"senha" : "$2a$10$7vtQFd.YCWyIH5sGRnNBUeRdFsdHsYMC4AsooaiPxl4KSYjHOTUXu",
+			"permissao" : "ADMIN"
+		}
+	]
+}

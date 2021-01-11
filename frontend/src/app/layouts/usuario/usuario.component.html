@@ -1,0 +1,35 @@
+<div class="login-page">
+    <div class="form">
+
+        <div>
+            <img src="../../../assets/logo-nkey.png" width="200"/>
+        </div>
+
+        <form>
+            <mat-form-field class="input">
+                <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <input type="email" matInput placeholder="Email" [(ngModel)]="usuario.email" name="email">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <input type="password" matInput placeholder="Senha" [(ngModel)]="usuario.senha" name="senha">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <input type="password" matInput placeholder="Confirmação senha" [(ngModel)]="usuario.confirmacaoSenha" name="confirmarSenha">
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button (click)="salvar()" color="primary">
+            Salvar
+        </button>
+        <button mat-stroked-button (click)="voltar()" color="primary">
+            Voltar
+        </button>
+
+    </div>
+</div>
+
