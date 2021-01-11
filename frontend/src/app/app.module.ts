@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-import { DefaultModule } from './layouts/default/default.module';
+import { HomeModule } from './layouts/home/home.module';
 import { LoginModule } from './layouts/login/login.module';
 import { UsuarioModule } from './layouts/usuario/usuario.module';
 
@@ -20,7 +20,7 @@ import { httpInterceptorProviders } from './http-interceptors';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule,
+    HomeModule,
     LoginModule,
     UsuarioModule,
     HttpClientModule

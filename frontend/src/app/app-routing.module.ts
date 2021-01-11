@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
-import { DefaultComponent } from './layouts/default/default.component';
+import { HomeComponent } from './layouts/home/home.component';
 import { LoginComponent } from './layouts/login/login.component';
 import { UsuarioComponent } from './layouts/usuario/usuario.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -10,7 +10,7 @@ import { CadastroComponent } from './modules/cadastro/components/cadastro.compon
 
 const routes: Routes = [{
     path: '',
-    component: DefaultComponent,
+    component: HomeComponent,
       children : [{
         path: '',
         component: DashboardComponent

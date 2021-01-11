@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DefaultComponent } from './default.component';
+import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -11,7 +11,7 @@ import { CadastroModule } from 'src/app/modules/cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
-    DefaultComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -23,4 +23,4 @@ import { CadastroModule } from 'src/app/modules/cadastro/cadastro.module';
     MatSnackBarModule
   ]
 })
-export class DefaultModule { }
+export class HomeModule { }

@@ -18,13 +18,14 @@ export class LoginService {
   ) { }
   
   login(login: Login) {
-    this.http.post(this.baseUrl, login, {observe : 'response'}).subscribe(response => {
-      const token = response.headers.get('Authorization');
-      if (response && token) {
-        window.localStorage.setItem('token', token);
-        this.router.navigate(['/']);
-      }
-    })
+    this.http.post(this.baseUrl, login, {observe : 'response'})
+      .subscribe(response => {
+        const token = response.headers.get('Authorization');
+        if (response && token) {
+          window.localStorage.setItem('token', token);
+          this.router.navigate(['/']);
+        }
+      });
   }
 
   logout() {
