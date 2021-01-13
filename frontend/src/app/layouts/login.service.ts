@@ -38,6 +38,7 @@ export class LoginService {
   }
 
   getTokenExpirationDate(token: string): Date {
+    token = token.replace("Bearer ", "");
     const decoded: any = jwtDecode(token);
 
     if (decoded.exp === undefined) {

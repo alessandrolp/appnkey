@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mvn clean install -f ./backend/pom.xml
+# mvn clean install -f ./backend/pom.xml
 
 docker-compose up --build

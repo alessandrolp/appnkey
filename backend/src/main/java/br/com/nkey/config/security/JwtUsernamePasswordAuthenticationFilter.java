@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nimbusds.jwt.SignedJWT;
+// import com.nimbusds.jwt.SignedJWT;
 
 import br.com.nkey.config.security.token.JwtConfiguration;
 import br.com.nkey.config.security.token.TokenFactory;
@@ -59,8 +59,12 @@ public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAut
 		
 		log.info("Autenticacao com sucesso para o usuario '{}'. Iniciando geração do token...", authResult.getName());
 
-		SignedJWT signedJWT = tokenFactory.createSignedJWT(authResult);
-		String encryptToken = tokenFactory.encryptToken(signedJWT);
+		Usuario usuario = (Usuario) authResult.getPrincipal();
+
+		// SignedJWT signedJWT = tokenFactory.createSignedJWT(authResult);
+		// String encryptToken = tokenFactory.encryptToken(signedJWT);
+
+		String encryptToken = tokenFactory.generateToken(usuario);
 		
 		log.info("Token gerado com sucesso! Adicionando ao response header.");
 		
