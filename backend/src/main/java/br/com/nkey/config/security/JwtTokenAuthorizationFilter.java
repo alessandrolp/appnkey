@@ -53,7 +53,7 @@ public class JwtTokenAuthorizationFilter extends OncePerRequestFilter {
 	}
 
 	private static List<SimpleGrantedAuthority> createAuthorities(String authority){
-		return List.of(new SimpleGrantedAuthority(authority));
+		return List.of(new SimpleGrantedAuthority("ROLE_" + authority));
 	}
 	
 	// @SneakyThrows
